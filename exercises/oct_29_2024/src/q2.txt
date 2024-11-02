@@ -1,0 +1,2 @@
+Student with top grade: Ester
+Average grade: 8

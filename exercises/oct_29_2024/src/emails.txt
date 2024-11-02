@@ -1,0 +1,4 @@
+abc@def.com
+aaa.com
+thisis@valid.net
+thisis@not
