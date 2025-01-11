@@ -100,3 +100,28 @@ The circuit would require:
 
 However, the circuit can be entirely ignored. This is because the signals `b`, `c`, `d`, `e` and `f`
 are not driven – thus, `a` is never used.
+
+## Question 8
+
+### First item
+
+1. To process = {a}; visited = {};
+2. To process = {b, j}; visited = {a};
+3. To process = {j, c}; visited = {a, b};
+4. To process = {c, k}; visited = {a, b, j};
+5. To process = {k, d, h, i}; visited = {a, b, j, c};
+6. To process = {d, h, i, l}; visited = {a, b, j, c, k};
+7. To process = {h, i, l, e}; visited = {a, b, j, c, k, d};
+8. To process = {i, l, e}; visited = {a, b, j, c, k, d, h};
+9. To process = {l, e}; visited = {a, b, j, c, k, d, h, i};
+10. To process = {e}; visited = {a, b, j, c, k, d, h, i, l};
+11. To process = {f, g}; visited = {a, b, j, c, k, d, h, i, l, e};
+12. To process = {g}; visited = {a, b, j, c, k, d, h, i, l, e, f};
+13. To process = {}; visited = {a, b, j, c, k, d, h, i, l, e, f, g};
+
+### Second item
+
+To identify whether `f` is in the fanin of `a`, one could use the Depth-First Search algorithm while
+walking backwards – i.e., recursively visiting the parents of each node during the traversal. For
+the traversal to not visit all the nodes in the graph, it is sufficient to start the search from `f`
+and stop when there are no (recursive) parents to visit.
