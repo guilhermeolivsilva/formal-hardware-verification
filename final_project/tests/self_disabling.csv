@@ -1,3 +1,0 @@
-#,Name,Source Instance,Source Signal,Destination Instance,Destination Signal
-CONNECTION,connection1,,gclk,dff,out
-CONNECTION,connection2,,data,dff,data
